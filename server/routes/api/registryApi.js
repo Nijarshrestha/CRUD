@@ -18,7 +18,7 @@ router.get('/:Name', (req,res)=>{
 
 //Post users to api/user
 router.post('/',(req,res)=>{
-    const {Name, Gender, Phone_Number, Email, Address, Nationality, Date_Of_Birth, Education_Background } = req.body
+    const {Name, Gender, Phone_Number, Email, Address, Nationality, Date_Of_Birth, Education_Background } = req.body;
     const newUser = new User({
         Name,
         Gender,

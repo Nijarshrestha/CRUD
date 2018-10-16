@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 const port = 5000;
 
-const register = require('./routes/api/registryApi');
+const user = require('./routes/api/registryApi');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -27,7 +27,7 @@ mongoose
 
 //Use Routes
 
-app.use('/api/register', register);
+app.use('/api/register', user);
 
 app.listen(port, (err)=> {
     if(err){
